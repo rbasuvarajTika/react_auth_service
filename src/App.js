@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { AuthPage } from "./Pages/AuthPage";
 import ForgotPassword from "./Pages/ForgotPassword";
 import ResetPassword from "./Pages/ResetPassword";
+import HomePage from "./Pages/HomePage";
 
 
 function App() {
@@ -19,6 +20,11 @@ function App() {
       path: "/resetpassword",
       element: <ResetPassword/>,
     },
+     {
+       path: "/homepage",
+       element: <HomePage/>,
+    },
+   
   ]);
 
   return (
