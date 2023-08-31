@@ -30,7 +30,7 @@ const Register = () => {
           const hanndleSubmit =(e)=>{
             e.preventDefault()
             console.log ("Submitted")
-            axios.post(`http://localhost:8080/api/v1/auth/signup `,{
+            axios.post(`http://localhost:8089/api/v1/auth/signup `,{
             firstName : firstName,
             lastName :lastName,
              email : email,
