@@ -41,7 +41,8 @@ const Register = () => {
            console.log(response.data)  
            //console.log('token', response.data.token);
           // localStorage.setItem('token', response.data.token)
-           alert("Successfully LoggedIn") 
+           alert("Successfully Registered") 
+           window.location.href="/"
          
          })
          .catch((err)=>{

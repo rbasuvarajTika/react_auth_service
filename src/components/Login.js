@@ -33,7 +33,8 @@ const handlePassWord=(e)=>{
   console.log('token', response.data.token);
    localStorage.setItem('token', response.data.token)
   alert("Successfully LoggedIn") 
-  navigate('/homepage')
+  // navigate('/homepage')
+  window.location.href="/homepage"
 })
 .catch((err)=>{
   console.log(err)

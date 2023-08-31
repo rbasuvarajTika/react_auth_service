@@ -1,33 +1,14 @@
 import "./App.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { AuthPage } from "./Pages/AuthPage";
-import ForgotPassword from "./Pages/ForgotPassword";
-import ResetPassword from "./Pages/ResetPassword";
-import HomePage from "./Pages/HomePage";
-
+import { RouterProvider,createBrowserRouter } from "react-router-dom";
+import { openRouter, userRouter } from "./routes/routes";
 
 function App() {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <AuthPage/>,
-    },
-    {
-      path: "/forgotpassword",
-      element: <ForgotPassword/>,
-    },
-    {
-      path: "/resetpassword",
-      element: <ResetPassword/>,
-    },
-     {
-       path: "/homepage",
-       element: <HomePage/>,
-    },
-   
-  ]);
+  const token = localStorage.getItem("token");
+  const router = token ? createBrowserRouter(userRouter) : createBrowserRouter(openRouter)
 
+  console.log(localStorage.getItem("token"), router)
   return (
+
     <div className="App">
       <RouterProvider router={router} />
     </div>
